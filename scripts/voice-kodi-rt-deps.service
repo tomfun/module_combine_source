@@ -1,0 +1,22 @@
+[Unit]
+Description=Voice merger
+After=pulseaudio.service
+Wants=pulseaudio.service
+
+
+[Service]
+WorkingDirectory=/home/user/PycharmProjects/module_combine_source
+Environment="XDG_RUNTIME_DIR=/run/user/1001"
+#Environment="PULSE_SERVER=unix:/tmp/pulse.socket"
+#Nice=-2
+CPUQuota=100%
+Type=simple
+#User=gstuser
+#User=julia
+#Group=julia
+Restart=on-failure
+RestartSec=1
+ExecStart=/usr/bin/bash /home/user/PycharmProjects/module_combine_source/systemd_rt_dependencies.sh
+
+[Install]
+WantedBy=multi-user.target

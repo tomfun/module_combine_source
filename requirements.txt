@@ -1,0 +1,6 @@
+pasimple==0.0.3
+scipy==1.14.0
+# apt-get install ffmpeg
+librosa==0.10.2.post1
+statsmodels==0.14.2
+numpy==2.1.0
